@@ -28,6 +28,22 @@ module.exports = function(grunt) {
         dest: 'build/app.concat.js'
       }
     },
+    express: {
+      options: {
+        script: 'server.js'
+      },
+      develop: {
+        options: {
+          node_env: 'development'
+        }
+      },
+      production: {
+        options: {
+          background: false,
+          node_env: 'production'
+        }
+      }
+    },
     uglify: {
       options: {
         sourceMap: true
@@ -47,7 +63,13 @@ module.exports = function(grunt) {
 
   // Default dev task
   grunt.registerTask('default', [
+    'develop-serve'
+  ])
+
+  // Build & serve for development
+  grunt.registerTask('develop-serve', [
     'develop',
+    'express:develop',
     'watch:develop'
   ])
 
@@ -57,10 +79,11 @@ module.exports = function(grunt) {
     'copy'
   ])
 
-  // Build for production
+  // Build & serve for production
   grunt.registerTask('production', [
     'clean',
     'concat',
-    'uglify'
+    'uglify',
+    'express:production'
   ])
 }

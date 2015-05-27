@@ -8,17 +8,11 @@ Development:
 ```shell
 # Build & watch for development
 grunt
-
-# Start server
-npm start
 ```
 
 Production:
 
 ```shell
-# Build for production
+# Build & serve for production
 grunt production
-
-# Start server in production
-NODE_ENV=production npm start
 ```

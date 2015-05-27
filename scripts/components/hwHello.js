@@ -1,4 +1,5 @@
-angular.module('HelloWorld.components')
-  .directive('hwHello', function() {
-    return { template: 'Hello' }
-  })
+'use strict'
+
+exports.hwHello = function() {
+  return { template: 'Hello' }
+}

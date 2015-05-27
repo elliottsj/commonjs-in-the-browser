@@ -1,5 +1,7 @@
 'use strict'
 
+var path = require('path')
+
 module.exports = function(grunt) {
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt)
@@ -11,18 +13,18 @@ module.exports = function(grunt) {
     clean: ['build'],
     copy: {
       app: {
-        src: ['app/index.html'],
-        dest: 'build/index.html'
+        expand: true,
+        cwd: 'app/',
+        src: ['bower_components/**', 'scripts/**'],
+        dest: 'build/'
       }
     },
     concat: {
       app: {
-        src: [
-          'app/scripts/main.js',
-          'app/scripts/components/_module.js',
-          'app/scripts/components/hwHello.js',
-          'app/scripts/components/hwWorld.js'
-        ],
+        src: require('./app/dependencies').map(function(filename) {
+          // Prepend filenames with 'app/'
+          return path.join('app/', filename)
+        }),
         dest: 'build/app.concat.js'
       }
     },
@@ -45,8 +47,14 @@ module.exports = function(grunt) {
 
   // Default dev task
   grunt.registerTask('default', [
-    'clean',
+    'develop',
     'watch:develop'
+  ])
+
+  // Build for development
+  grunt.registerTask('develop', [
+    'clean',
+    'copy'
   ])
 
   // Build for production

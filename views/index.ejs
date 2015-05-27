@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html ng-app="HelloWorld">
+<head>
+  <title>Hello World: Enterprise Edition</title>
+  <% dependencies.forEach(function(path) { %>
+    <script src="<%= path %>"></script>
+  <% }) %>
+</head>
+<body>
+  <main><hw-hello></hw-hello> <hw-world></hw-world></main>
+</body>
+</html>

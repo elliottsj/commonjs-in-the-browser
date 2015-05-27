@@ -9,8 +9,5 @@ module.exports = {
     path: 'build/',
     publicPath: 'build/',
     filename: 'app.js'
-  },
-  devtool: 'source-map',
-  watch: true,
-  keepalive: true
+  }
 }

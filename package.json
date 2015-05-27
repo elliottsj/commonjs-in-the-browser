@@ -1,0 +1,28 @@
+{
+  "name": "commonjs-in-the-browser",
+  "version": "1.0.0",
+  "description": "A demo and slideshow of using CommonJS modules in the browser via webpack",
+  "main": "scripts/main.js",
+  "scripts": {
+    "bundle": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliottsj/commonjs-in-the-browser.git"
+  },
+  "author": "Spencer Elliott <me@elliottsj.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elliottsj/commonjs-in-the-browser/issues"
+  },
+  "homepage": "https://github.com/elliottsj/commonjs-in-the-browser#readme",
+  "dependencies": {
+    "grunt": "0.4.5",
+    "grunt-contrib-clean": "0.6.0",
+    "grunt-contrib-concat": "0.5.1",
+    "grunt-contrib-uglify": "0.9.1",
+    "load-grunt-tasks": "3.2.0",
+    "time-grunt": "1.2.1"
+  }
+}

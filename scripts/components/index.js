@@ -4,6 +4,5 @@ var angular = require('angular')
 
 module.exports =
   angular.module('HelloWorld.components', [])
-    .directive('hwHello', require('./hwHello').hwHello)
-    .directive('hwWorld', require('./hwWorld').hwWorld)
-    .controller('hwWorldCtrl', require('./hwWorld').hwWorldCtrl)
+    .value('Hello', require('./Hello'))
+    .value('World', require('./World'))

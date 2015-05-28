@@ -12,5 +12,11 @@ module.exports = {
   },
   devtool: 'source-map',
   watch: true,
-  keepalive: true
+  keepalive: true,
+  failOnError: false,
+  module: {
+    loaders: [
+      {test: /\.jsx?$/, loader: 'babel-loader'}
+    ]
+  }
 }

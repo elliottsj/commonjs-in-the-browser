@@ -14,5 +14,10 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin()
-  ]
+  ],
+  module: {
+    loaders: [
+      {test: /\.jsx?$/, loader: 'babel-loader'}
+    ]
+  }
 }

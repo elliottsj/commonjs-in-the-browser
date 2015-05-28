@@ -1,5 +1,9 @@
 'use strict'
 
-exports.hwHello = function() {
-  return { template: 'Hello' }
+import React from 'react'
+
+export default class Hello extends React.Component {
+  render() {
+    return <span>Hello</span>
+  }
 }

@@ -1,13 +1,11 @@
 'use strict'
 
-exports.hwWorld = function() {
+module.exports = function() {
   return {
     template: '{{ ctrl.world }}',
-    controller: 'hwWorldCtrl',
+    controller: function() {
+      this.world = 'World'
+    },
     controllerAs: 'ctrl'
   }
-}
-
-exports.hwWorldCtrl = function() {
-  this.world = 'World'
 }

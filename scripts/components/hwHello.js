@@ -1,5 +1,5 @@
 'use strict'
 
-exports.hwHello = function() {
+module.exports = function() {
   return { template: 'Hello' }
 }

@@ -17,12 +17,12 @@ module.exports = {
       // Extract css files
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('css-loader?sourceMap')
+        loader: ExtractTextPlugin.extract('css?sourceMap')
       },
       // Extract stylus files
       {
         test: /\.styl$/,
-        loader: ExtractTextPlugin.extract('css-loader?sourceMap!stylus-loader?{sourceMap:{inline:true}}')
+        loader: ExtractTextPlugin.extract('css?sourceMap!stylus?{sourceMap:{inline:true}}')
       }
     ]
   },

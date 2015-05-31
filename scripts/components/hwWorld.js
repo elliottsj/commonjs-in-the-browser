@@ -3,7 +3,8 @@
 module.exports = function() {
   return {
     template: '{{ ctrl.world }}',
-    controller: function() {
+    /*@ngInject*/
+    controller: function($http) {
       this.world = 'World'
     },
     controllerAs: 'ctrl'

@@ -23,6 +23,11 @@ module.exports = {
       {
         test: /\.styl$/,
         loader: ExtractTextPlugin.extract('css?sourceMap!stylus?{sourceMap:{inline:true}}')
+      },
+      // Load html templates into angular's template cache
+      {
+        test: /\.html$/,
+        loader: 'html'
       }
     ]
   },

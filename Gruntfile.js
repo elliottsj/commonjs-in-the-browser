@@ -32,13 +32,13 @@ module.exports = function(grunt) {
 
   // Build and serve for development
   grunt.registerTask('develop', [
-    'express:develop',         // Launch express in background
-    'webpack:develop'  // Watch and re-bundle app continuously
+    'express:develop',  // Launch express in background
+    'webpack:develop'   // Watch and re-bundle app continuously
   ])
 
   // Build and serve for production
   grunt.registerTask('production', [
     'webpack:production',  // Bundle app once
-    'express:production'              // Keep express running indefinitely
+    'express:production'   // Keep express running indefinitely
   ])
 }

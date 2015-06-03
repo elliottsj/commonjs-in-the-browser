@@ -3,6 +3,9 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = require('./webpack.config.base').merge({
+  output: {
+    pathinfo: true
+  },
   module: {
     loaders: [
       // Extract css files (with sourcemaps)
